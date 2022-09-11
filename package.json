@@ -78,7 +78,7 @@
     "@adiwajshing/eslint-config": "git+https://github.com/adiwajshing/eslint-config",
     "@adiwajshing/keyed-db": "latest",
     "@types/got": "^9.6.12",
-    "@types/jest": "^28.1.8",
+    "@types/jest": "^29.0.0",
     "@types/node": "^18.7.13",
     "@types/sharp": "^0.30.5",
     "@types/ws": "^8.0.0",
