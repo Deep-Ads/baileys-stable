@@ -36,7 +36,7 @@ export const getUrlInfo = async(
 			previewLink = 'https://' + previewLink
 		}
 		// Add trailing slash
-		if (!previewLink.endsWith('/') {    
+		if (!previewLink.endsWith('/')) {    
 		    previewLink = previewLink + '/'
 	    	}
 
