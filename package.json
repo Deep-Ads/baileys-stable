@@ -80,7 +80,7 @@
     "@types/got": "^9.6.11",
     "@types/jest": "^27.5.1",
     "@types/node": "^18.7.17",
-    "@types/sharp": "^0.29.4",
+    "@types/sharp": "^0.30.5",
     "@types/ws": "^8.0.0",
     "eslint": "^8.0.0",
     "jest": "^27.0.6",
