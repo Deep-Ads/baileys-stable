@@ -35,6 +35,10 @@ export const getUrlInfo = async(
 		if(!text.startsWith('https://') && !text.startsWith('http://')) {
 			previewLink = 'https://' + previewLink
 		}
+		// Add trailing slash
+		if (!previewLink.endsWith('/') {    
+		    previewLink = previewLink + '/'
+	    	}
 
 		const info = await getLinkPreview(previewLink, { timeout: opts.timeoutMs })
 		if(info && 'title' in info) {
