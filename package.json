@@ -41,7 +41,7 @@
     "libsignal": "github:amiruldev20/signal",
     "music-metadata": "^8.0.1",
     "node-cache": "^5.1.2",
-    "pino": "^7.0.0",
+    "pino": "^8.5.0",
     "protobufjs": "^7.1.1",
     "ws": "^8.0.0"
   },
