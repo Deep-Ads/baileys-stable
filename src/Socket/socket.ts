@@ -24,7 +24,7 @@ export const makeSocket = ({
 	browser,
 	auth: authState,
 	printQRInTerminal,
-	defaultQueryTimeoutMs,
+	defaultQueryTimeoutMs: 0,
 	syncFullHistory,
 	transactionOpts,
 	qrTimeout
