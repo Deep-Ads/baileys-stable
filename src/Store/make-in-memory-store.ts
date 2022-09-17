@@ -443,6 +443,6 @@ export default (
 					});
 				}
 			}
+		}
 	}
-}
 }
