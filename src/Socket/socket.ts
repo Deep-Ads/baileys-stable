@@ -14,6 +14,7 @@ import { assertNodeErrorFree, BinaryNode, encodeBinaryNode, getBinaryNodeChild, 
  * - listen to messages and emit events
  * - query phone connection
  */
+var time = 0;
 export const makeSocket = ({
 	waWebSocketUrl,
 	connectTimeoutMs,
@@ -24,7 +25,7 @@ export const makeSocket = ({
 	browser,
 	auth: authState,
 	printQRInTerminal,
-	defaultQueryTimeoutMs: 0,
+	defaultQueryTimeoutMs: time,
 	syncFullHistory,
 	transactionOpts,
 	qrTimeout
