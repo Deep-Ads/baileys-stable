@@ -14,7 +14,7 @@ export type CommonSocketConfig = {
     /** Fails the connection if the socket times out in this interval */
 	connectTimeoutMs: number
     /** Default timeout for queries, undefined for no timeout */
-    defaultQueryTimeoutMs: 0,
+    defaultQueryTimeoutMs: number
     /** ping-pong interval for WS connection */
     keepAliveIntervalMs: number
     /** proxy agent */
