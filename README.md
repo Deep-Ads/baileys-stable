@@ -14,18 +14,20 @@
 
 [click here](https://github.com/amiruldev20/wabotjs), base plugins with ESM
 
+[CLICK HERE](https://npmjs.com/package/baileys), BAILEYS VERSI PACKAGE
+
 Then import your code using:
 ``` ts 
 // for multi-device
-import makeWASocket from '@adiwajshing/baileys'
+import makeWASocket from 'baileys'
 // for legacy web
-import {makeWALegacySocket} from '@adiwajshing/baileys'
+import {makeWALegacySocket} from 'baileys'
 ```
 
 ## Connecting
 
 ``` ts
-import makeWASocket, { DisconnectReason } from '@adiwajshing/baileys'
+import makeWASocket, { DisconnectReason } from 'baileys'
 import { Boom } from '@hapi/boom'
 
 async function connectToWhatsApp () {
@@ -118,7 +120,7 @@ You obviously don't want to keep scanning the QR code every time you want to con
 
 So, you can load the credentials to log back in:
 ``` ts
-import makeWASocket, { BufferJSON, useMultiFileAuthState } from '@adiwajshing/baileys'
+import makeWASocket, { BufferJSON, useMultiFileAuthState } from 'baileys'
 import * as fs from 'fs'
 
 // utility function to help save the auth state in a single folder
@@ -230,15 +232,19 @@ Baileys does not come with a defacto storage for chats, contacts, or messages. H
 It can be used as follows:
 
 ``` ts
-import makeWASocket, { makeInMemoryStore } from '@adiwajshing/baileys'
+import makeWASocket, { makeInMemoryStore } from 'baileys'
 // the store maintains the data of the WA connection in memory
 // can be written out to a file & read from it
 const store = makeInMemoryStore({ })
 // can be read from a file
 store.readFromFile('./baileys_store.json')
+or multi
+store.readFromMultiFiles('./baileys_store/')
 // saves the state to a file every 10s
 setInterval(() => {
     store.writeToFile('./baileys_store.json')
+    // or multi files
+    store.writeToMultiFiles('./baileys_store/')
 }, 10_000)
 
 const sock = makeWASocket({ })
@@ -270,7 +276,7 @@ Example on using the eg. version:
 ``` ts
 import P from "pino"
 import { Boom } from "@hapi/boom"
-import { makeWALegacySocket } from '@adiwajshing/baileys'
+import { makeWALegacySocket } from 'baileys'
 
 // store can be used with legacy version as well
 const store = makeInMemoryStore({ logger: P().child({ level: 'debug', stream: 'store' }) })
@@ -287,7 +293,7 @@ store.bind(sock.ev)
 If you need a type representing either the legacy or MD version:
 ``` ts
 // this type can have any of the socket types underneath
-import { AnyWASocket } from '@adiwajshing/baileys'
+import { AnyWASocket } from 'baileys'
 ```
 
 ## Sending Messages
@@ -297,7 +303,7 @@ import { AnyWASocket } from '@adiwajshing/baileys'
 ### Non-Media Messages
 
 ``` ts
-import { MessageType, MessageOptions, Mimetype } from '@adiwajshing/baileys'
+import { MessageType, MessageOptions, Mimetype } from 'baileys'
 
 const id = 'abcd@s.whatsapp.net' // the WhatsApp ID 
 // send a simple text!
@@ -415,7 +421,7 @@ Sending media (video, stickers, images) is easier & more efficient than ever.
 - When specifying a media url, Baileys never loads the entire buffer into memory; it even encrypts the media as a readable stream.
 
 ``` ts
-import { MessageType, MessageOptions, Mimetype } from '@adiwajshing/baileys'
+import { MessageType, MessageOptions, Mimetype } from 'baileys'
 // Sending gifs
 await sock.sendMessage(
     id, 
@@ -497,7 +503,7 @@ const sendMsg = await sock.sendMessage(id, templateMessage)
                                     Do not enter this field if you want to automatically generate a thumb
                                 */
         mimetype: Mimetype.pdf, /* (for media messages) specify the type of media (optional for all media types except documents),
-                                    import {Mimetype} from '@adiwajshing/baileys'
+                                    import {Mimetype} from 'baileys'
                                 */
         fileName: 'somefile.pdf', // (for media messages) file name for the media
         /* will send audio messages as voice notes, if set to true */
@@ -556,7 +562,7 @@ The presence expires after about 10 seconds.
 If you want to save the media you received
 ``` ts
 import { writeFile } from 'fs/promises'
-import { downloadMediaMessage } from '@adiwajshing/baileys'
+import { downloadMediaMessage } from 'baileys'
 
 sock.ev.on('messages.upsert', async ({ messages }) => {
     const m = messages[0]

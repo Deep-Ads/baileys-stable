@@ -1,6 +1,6 @@
 {
-  "name": "Baileys",
-  "version": "4.5.4",
+  "name": "baileys",
+  "version": "4.5.8",
   "description": "WhatsApp API",
   "homepage": "https://github.com/amiruldev20/Baileys",
   "main": "lib/index.js",
