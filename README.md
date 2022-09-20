@@ -11,6 +11,7 @@
  **Join the Discord [here](https://discord.gg/WeJM5FP9GG)**
 
 ## Example Script Whatsapp Bot MD
+<<<<<<< HEAD
 
 [click here](https://github.com/amiruldev20/wabotjs), base plugins with ESM
 
@@ -22,6 +23,37 @@ Then import your code using:
 import makeWASocket from 'baileys'
 // for legacy web
 import {makeWALegacySocket} from 'baileys'
+=======
+
+[click here](https://github.com/amiruldev20/wabotjs), base plugins with ESM
+
+[CLICK HERE](https://npmjs.com/package/baileys), BAILEYS VERSI PACKAGE
+
+## Example
+
+Do check out & run [example.ts](https://github.com/adiwajshing/Baileys/blob/master/Example/example.ts) to see an example usage of the library.
+The script covers most common use cases.
+To run the example script, download or clone the repo and then type the following in a terminal:
+1. ``` cd path/to/Baileys ```
+2. ``` yarn ```
+3. ``` yarn example ```
+
+## Install
+
+Use the stable version:
+```
+yarn add baileys
+```
+
+Use the edge version (no guarantee of stability, but latest fixes + features)
+```
+yarn add github:adiwajshing/baileys
+```
+
+Then import your code using:
+``` ts 
+import makeWASocket from 'baileys'
+>>>>>>> bd849e8e3652c4bf61cb67a047826f8b947a9ba7
 ```
 
 ## Connecting
@@ -63,6 +95,11 @@ If the connection is successful, you will see a QR code printed on your terminal
 
 **Note:** install `qrcode-terminal` using `yarn add qrcode-terminal` to auto-print the QR to the terminal.
 
+<<<<<<< HEAD
+=======
+**Note:** the code to support the legacy version of WA Web (pre multi-device) has been removed in v5. Only the standard multi-device connection is now supported. This is done as WA seems to have completely dropped support for the legacy version.
+
+>>>>>>> bd849e8e3652c4bf61cb67a047826f8b947a9ba7
 ## Configuring the Connection
 
 You can configure the connection by passing a `SocketConfig` object.
@@ -268,6 +305,7 @@ The store also provides some simple functions such as `loadMessages` that utiliz
 
 **Note:** I highly recommend building your own data store especially for MD connections, as storing someone's entire chat history in memory is a terrible waste of RAM.
 
+<<<<<<< HEAD
 ## Using the Legacy Version
 
 The API for the legacy and MD versions has been made as similar as possible so you can switch between them seamlessly.
@@ -296,6 +334,8 @@ If you need a type representing either the legacy or MD version:
 import { AnyWASocket } from 'baileys'
 ```
 
+=======
+>>>>>>> bd849e8e3652c4bf61cb67a047826f8b947a9ba7
 ## Sending Messages
 
 **Send all types of messages with a single function:**
