@@ -14,6 +14,7 @@ import { assertNodeErrorFree, BinaryNode, encodeBinaryNode, getBinaryNodeChild, 
  * - listen to messages and emit events
  * - query phone connection
  */
+
 export const makeSocket = ({
 	waWebSocketUrl,
 	connectTimeoutMs,
