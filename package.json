@@ -37,7 +37,7 @@
     "axios": "^0.24.0",
     "futoin-hkdf": "^1.5.1",
     "libsignal": "git+https://github.com/amiruldev20/signal",
-    "music-metadata": "^7.12.3",
+    "music-metadata": "^8.1.0",
     "node-cache": "^5.1.2",
     "pino": "^7.0.0",
     "protobufjs": "^6.11.3",
